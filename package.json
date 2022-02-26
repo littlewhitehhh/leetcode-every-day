@@ -1,0 +1,40 @@
+{
+    "name": "leetcode-every-day",
+    "version": "1.0.0",
+    "description": "\"leetcode-every-day\"",
+    "main": "index.js",
+    "dependencies": {
+        "husky": "^7.0.4"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^16.2.1",
+        "@commitlint/config-conventional": "^16.2.1"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint-staged": "lint-staged"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/littlewhitehhh/leetcode-every-day.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/littlewhitehhh/leetcode-every-day/issues"
+    },
+    "homepage": "https://github.com/littlewhitehhh/leetcode-every-day#readme",
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
+    "lint-staged": {
+        "*.{js,vue,jsx,tsx}": [
+            "prettier --write",
+            "eslint --cache --fix",
+            "git add"
+        ]
+    }
+}

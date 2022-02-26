@@ -1,1 +1,1 @@
-"# leetcode-every-day" 
+"leetcode-every-day"
